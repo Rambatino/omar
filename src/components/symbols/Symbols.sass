@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap')
+
+$math-font: 'Old Standard TT', serif
+
+.Awaiting
+  .box
+    border-radius: 4px
+    height: 50px
+    width: 50px
+    max-width: 300px
+    box-sizing: border-box
+    background: #eee
+    overflow: hidden
+    display: flex
+    text-align: center
+    cursor: pointer
+    input
+      width: 100%
+      height: 100%
+      line-height: 100%
+      padding-top: 3px
+      text-align: center
+      border: none
+      background-color: transparent
+      font-size: 40px
+      font-family: $math-font
+      cursor: pointer
+    *:focus
+      outline: none
+    &.isFocused
+      border: 1px solid #6666ff
+      input
+        visibility: visible
+
+  .box:hover
+    border: 2px solid #3333ff
+
+.SquareRoot
+
+.horizontal
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  *
+    margin: 2px
+  img
+    width: 20px
+
+img.p
+  width: 40px
+  margin: 0px
+
+
+.squared
+  font-size: 30px
+  padding-bottom: 40px
+  font-weight: bold
+
+.vertical
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  #minus
+    width: 100%
+    height: 4px
+    background-color: black
+    border-radius: 3px
+  *
+    margin: 2px
