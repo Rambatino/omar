@@ -1,6 +1,6 @@
 import React, { useState, SyntheticEvent } from 'react'
 import Awaiting from '../components/symbols/Awaiting'
-import './FormulaBuilder.sass'
+import './Formula.sass'
 import SumOf from '../components/symbols/SumOf'
 import Sum from '../components/symbols/Sum'
 import Divide from '../components/symbols/Divide'
@@ -8,7 +8,6 @@ import Minus from '../components/symbols/Minus'
 import Multiply from '../components/symbols/Multiply'
 import SquareRoot from '../components/symbols/SquareRoot'
 import Squared from '../components/symbols/Squared'
-import MathML from 'react-math'
 
 const k = () => Math.random().toString(36).substring(7)
 
@@ -107,7 +106,12 @@ const FormulaBuilder = () => {
         onChange: (e: React.FormEvent<HTMLInputElement>) => {
           setFormulaList({
             subEl: formulaList.subEl.map((s) =>
-              modifyForKey(s, el.key, {}, { value: e.currentTarget.value })
+              modifyForKey(
+                s,
+                el.key,
+                {},
+                {} /*{ value: e.currentTarget.value }*/
+              )
             ),
           })
         },
@@ -138,8 +142,6 @@ const FormulaBuilder = () => {
         ))}
       </div>
       <div className="Builder">{returnElements(formulaList)}</div>
-
-      <MathML text="e^(i pi)=-1" />
     </div>
   )
 }

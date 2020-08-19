@@ -1,11 +1,11 @@
 import React from 'react'
-import './App.css'
-import FormulaBuilder from './containers/FormulaBuilder'
+import './App.sass'
+import Formula from './containers/Formula'
 
 const App = () => {
   return (
     <div className="App">
-      <FormulaBuilder />
+      <Formula />
     </div>
   )
 }
